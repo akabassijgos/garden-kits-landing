@@ -45,3 +45,20 @@
     --color-error: #F87171;
     --color-info: #3B82F6;
 }
+
+
+/* =========================== ANIMATIONS =================================== */
+@theme {
+  --animate-float-hero: float-hero 4s linear infinite;
+  @keyframes float-hero {
+    0% {
+        transform: translateY(-8px);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+  }
+}
