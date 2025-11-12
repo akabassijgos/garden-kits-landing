@@ -2,3 +2,46 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+
+/* ========================== LIGHT THEME =================================== */
+@theme {
+    /* -------------------- Primary Colors -------------------- */
+    --color-primary: #0EC451;          /* main green (buttons, links, accents) */
+    --color-primary-light: #7FEA9C;    /* lighter hover or soft backgrounds */
+    --color-primary-dark: #0A9C42;     /* darker hover/active */
+
+    /* -------------------- Neutral Colors -------------------- */
+    --color-bg: #FFFFFF;               /* page background */
+    --color-surface: #F5F5F5;          /* cards, sections, panels */
+    --color-text-primary: #111111;     /* main text */
+    --color-text-secondary: #555555;   /* secondary text */
+    --color-border: #E0E0E0;           /* dividers, borders */
+
+    /* -------------------- Feedback Colors -------------------- */
+    --color-success: #16A34A;
+    --color-warning: #EAB308;
+    --color-error: #DC2626;
+    --color-info: #2563EB;
+}
+
+
+/* ============================ DARK THEME ================================== */
+.dark {
+    /* -------------------- Primary Colors -------------------- */
+    --color-primary: #0EC451;          /* same vibrant green for brand identity */
+    --color-primary-light: #1CD466;    /* brighter variant for contrast */
+    --color-primary-dark: #097A35;     /* darker variant for hover/active */
+
+    /* -------------------- Neutral Colors -------------------- */
+    --color-bg: #202020;               /* base background (softer than black) */
+    --color-surface: #2A2A2A;          /* cards, sections, panels */
+    --color-text-primary: #F5F5F5;     /* main text */
+    --color-text-secondary: #BBBBBB;   /* secondary text */
+    --color-border: #3A3A3A;           /* dividers, borders */
+
+    /* -------------------- Feedback Colors -------------------- */
+    --color-success: #22C55E;
+    --color-warning: #FACC15;
+    --color-error: #F87171;
+    --color-info: #3B82F6;
+}
