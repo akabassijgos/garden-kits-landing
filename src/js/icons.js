@@ -1,7 +1,8 @@
-import { createIcons, Menu } from 'lucide';
+import { createIcons, Leaf, Menu } from 'lucide';
 
 createIcons({
   icons: {
     Menu,
+    Leaf,
   }
 });
