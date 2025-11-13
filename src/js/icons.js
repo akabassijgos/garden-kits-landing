@@ -1,6 +1,7 @@
 import {
   createIcons, Leaf, Menu, CircleCheckBig, Flower2, Smile, ChevronLeft,
-  ChevronRight, Sprout, Cylinder, Book, Box, Award, Scissors, BookOpen
+  ChevronRight, Sprout, Cylinder, Book, Box, Award, Scissors, BookOpen,
+  ChevronDown, ChevronUp, Sun, Droplets, Tag, RotateCcw
 } from 'lucide';
 
 createIcons({
@@ -19,5 +20,11 @@ createIcons({
     Award,
     Scissors,
     BookOpen,
+    ChevronDown,
+    ChevronUp,
+    Sun,
+    Droplets,
+    Tag,
+    RotateCcw
   }
 });

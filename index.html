@@ -371,11 +371,98 @@
 
         <!-- FAQ -->
         <section id="faq" class="max-w-6xl mx-auto px-4 py-16">
-            <h2 class="text-2xl font-bold">FAQ & care tips</h2>
-            <ul class="mt-4 space-y-3 text-text-secondary">
-                <li><strong>Q:</strong> How often to water? <strong>A:</strong> Check the card.</li>
-                <li><strong>Q:</strong> Are pots biodegradable? <strong>A:</strong> Yes.</li>
-            </ul>
+            <h2 class="text-2xl font-bold">FAQ & Care tips</h2>
+        
+            <div class="mt-6 space-y-3" role="region" aria-labelledby="faq-heading">
+                <!-- Accordion item 1 -->
+                <div class="bg-surface border border-border/10 rounded-lg overflow-hidden">
+                    <h3>
+                        <button type="button"
+                            class="w-full text-left px-4 py-3 flex items-center justify-between gap-4
+                            focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2 focus-visible:ring-offset-surface
+                            cursor-pointer"
+                            aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">
+                            <span class="font-medium">How often should I water the plants?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transform transition-transform"></i>
+                        </button>
+                    </h3>
+        
+                    <div id="faq-1" role="region" aria-labelledby="faq-btn-1" hidden class="px-4 pb-4 text-text-secondary">
+                        Most kits need light, infrequent watering, typically once a week for indoor kits depending on the
+                        substrate and temperature. Check the included care card for the specific plant and feel the soil: water
+                        when the top 1-2 cm is dry.
+                    </div>
+                </div>
+        
+                <!-- Accordion item 2 -->
+                <div class="bg-surface border border-border/10 rounded-lg overflow-hidden">
+                    <h3>
+                        <button type="button"
+                            class="w-full text-left px-4 py-3 flex items-center justify-between gap-4 focus:outline-none 
+                            focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2 focus-visible:ring-offset-surface cursor-pointer"
+                            aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
+                            <span class="font-medium">Are the pots biodegradable?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transform transition-transform"></i>
+                        </button>
+                    </h3>
+        
+                    <div id="faq-2" role="region" aria-labelledby="faq-btn-2" hidden class="px-4 pb-4 text-text-secondary">
+                        Yes, our standard pots are made from biodegradable coir/compostable fibre. They will break down in
+                        garden soil over time; check the product description for exact materials.
+                    </div>
+                </div>
+        
+                <!-- Accordion item 3 -->
+                <div class="bg-surface border border-border/10 rounded-lg overflow-hidden">
+                    <h3>
+                        <button type="button"
+                            class="w-full text-left px-4 py-3 flex items-center justify-between gap-4 
+                            focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2 focus-visible:ring-offset-surface
+                            cursor-pointer"
+                            aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
+                            <span class="font-medium">Can I use these kits outdoors?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transform transition-transform"></i>
+                        </button>
+                    </h3>
+        
+                    <div id="faq-3" role="region" aria-labelledby="faq-btn-3" hidden class="px-4 pb-4 text-text-secondary">
+                        Many of our kits can be used outdoors. Check the product page for frost tolerance and recommended
+                        exposure. For balconies, choose varieties noted as compact and sun-tolerant.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Care tips (styled) -->
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold">Care tips</h3>
+        
+                <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="sun" class="w-5 h-5 text-primary mt-1"></i>
+                        <span class="text-text-secondary">Place indoor kits near bright, indirect light.
+                            Avoid hot direct sun through glass.
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="droplets" class="w-5 h-5 text-primary mt-1"></i>
+                        <span class="text-text-secondary">Start with the watering schedule on the care card, 
+                            then adjust based on your environment.
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="tag" class="w-5 h-5 text-primary mt-1"></i>
+                        <span class="text-text-secondary">Use the included biodegradable labels to note 
+                            planting dates and varieties.
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="rotate-ccw" class="w-5 h-5 text-primary mt-1"></i>
+                        <span class="text-text-secondary">Rotate pots occasionally for even light exposure 
+                            and balanced growth.
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Contact -->
