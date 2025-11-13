@@ -1,4 +1,7 @@
-import { createIcons, Leaf, Menu, CircleCheckBig, Flower2, Smile } from 'lucide';
+import {
+  createIcons, Leaf, Menu, CircleCheckBig, Flower2, Smile, ChevronLeft,
+  ChevronRight
+} from 'lucide';
 
 createIcons({
   icons: {
@@ -7,5 +10,7 @@ createIcons({
     CircleCheckBig,
     Flower2,
     Smile,
+    ChevronLeft,
+    ChevronRight,
   }
 });

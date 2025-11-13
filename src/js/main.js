@@ -80,3 +80,76 @@
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 })();
+
+
+// Testimonials
+(function () {
+    const testimonials = [
+        {
+            name: 'Aiko', location: 'Kyoto', img: './images/testimonials/aiko.jpg',
+            text: `Love my balcony basil! The kit included everything I needed, and the illustrated 
+            card made planting so simple. My herbs are thriving and look amazing on my windowsill.`
+        },
+        {
+            name: 'Jack', location: 'Sydney', img: './images/testimonials/jack.jpg',
+            text: `The care cards are great for beginners; saved my first crop! I've been 
+            recommending these kits to all my friends who want to start small indoor gardens.`
+        },
+        {
+            name: 'Diego', location: 'Madrid', img: './images/testimonials/diego.jpg',
+            text: `Fast shipping and great packaging. Plants arrived healthy and ready to grow. 
+            I especially appreciate how easy it was to follow the instructions and see results quickly.`
+        }
+    ];
+
+    const container = document.getElementById('testiSlides');
+    const dotsContainer = document.getElementById('testiDots');
+
+    testimonials.forEach((t, i) => {
+        // create slide
+        const slide = document.createElement('article');
+        slide.className = 'flex-shrink-0 w-full px-16 py-6 bg-surface rounded-2xl border border-border/10 shadow-md flex gap-4 items-center';
+        slide.innerHTML = `
+        <img src="${t.img}" alt="${t.name}" class="w-40 h-40 rounded-full object-cover shadow-sm shrink-0">
+        <div>
+        <blockquote class="text-text-primary text-lg">“${t.text}”</blockquote>
+        <div class="mt-3 text-sm text-text-secondary">${t.name}, ${t.location}</div>
+        </div>
+    `;
+        container.appendChild(slide);
+
+        // create dot
+        const dot = document.createElement('button');
+        dot.className = 'w-3 h-3 rounded-full bg-border/40';
+        dot.addEventListener('click', () => show(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    let idx = 0;
+
+    function update() {
+        container.style.transform = `translateX(-${idx * 100}%)`;
+        // update dots
+        Array.from(dotsContainer.children).forEach((dot, i) => {
+            dot.classList.toggle('bg-primary', i === idx);
+            dot.classList.toggle('bg-border/40', i !== idx);
+        });
+    }
+
+    function show(i) {
+        idx = (i + testimonials.length) % testimonials.length;
+        update();
+    }
+
+    // controls
+    document.getElementById('prevTesti').addEventListener('click', () => show(idx - 1));
+    document.getElementById('nextTesti').addEventListener('click', () => show(idx + 1));
+
+    // init
+    update();
+
+    // auto-slide
+    let auto = setInterval(() => show(idx + 1), 6000);
+    container.addEventListener('mouseenter', () => clearInterval(auto));
+    container.addEventListener('mouseleave', () => auto = setInterval(() => show(idx + 1), 6000));
+})();
