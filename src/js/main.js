@@ -196,3 +196,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+
+// Form
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('contactSuccess');
+
+    form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // a fake submit for now
+    success.classList.remove('hidden');
+    form.reset();
+    });
+});
