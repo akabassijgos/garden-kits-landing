@@ -503,22 +503,54 @@
     </main>
 
     <!-- Footer with theme toggle -->
-    <footer class="border-t border-border/20 bg-surface">
-        <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
-            <div class="text-sm text-text-secondary">© <span id="year">2025</span> GardenKits</div>
-
-            <!-- Theme button -->
-            <div class="flex items-center gap-3">
-                <button id="themeBtn"
-                    class="px-3 py-2 border border-border rounded text-sm focus:outline-none focus:ring"
-                    aria-label="Change theme">
-                    Theme: <span id="themeLabel">Auto</span>
-                </button>
+    <footer class="border-t border-border/20 bg-surface mt-20">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+                <!-- Brand (left) -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold">GardenKits</h3>
+                    <p class="mt-1 text-sm text-text-secondary">Grow easy. Grow fresh. Grow anywhere.</p>
+                </div>
+    
+                <!-- Center links -->
+                <nav class="flex justify-center">
+                    <div class="flex items-center gap-6 text-sm text-text-secondary">
+                        <a href="#" class="hover:text-text-primary transition">About us</a>
+                        <a href="#" class="hover:text-text-primary transition">Terms</a>
+                        <a href="#" class="hover:text-text-primary transition">Privacy</a>
+                    </div>
+                </nav>
+    
+                <!-- Controls: Theme + Language (right) -->
+                <div class="flex justify-center md:justify-end items-center gap-4">
+                    <!-- Theme toggle -->
+                    <button id="themeBtn"
+                        class="flex items-center gap-2 px-3 py-2 border border-border rounded-lg text-sm hover:bg-muted transition cursor-pointer"
+                        aria-label="Change theme">
+                        <span id="themeIcon" class="w-4 h-4"></span>
+                        <span id="themeLabel">Auto</span>
+                    </button>
+    
+                    <!-- Language selector (visual only for now) -->
+                    <button
+                        class="flex items-center gap-2 px-3 py-2 border border-border rounded-lg text-sm hover:bg-muted transition cursor-pointer"
+                        aria-label="Change language">
+                        <span class="inline-block w-4 h-3 rounded-sm bg-primary"></span>
+                        EN
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="border-t border-border/20 mt-6 pt-4">
+                <p class="text-center text-xs text-text-secondary">
+                    © <span id="year">2025</span> GardenKits
+                </p>
             </div>
         </div>
     </footer>
 
-    <script src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
     <script type="module" src="./src/js/icons.js"></script>
 </body>
 

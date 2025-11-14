@@ -1,3 +1,5 @@
+import { createElement, Sun, Moon, SunMoon } from 'lucide';
+
 
 // Mobile menu toggle
 (function () {
@@ -28,6 +30,25 @@
     const modes = ['auto', 'light', 'dark'];
     let modeIndex = 0;
 
+    function updateThemeIcon(mode) {
+        const iconEl = document.getElementById('themeIcon');
+        if (!iconEl) return;
+
+        iconEl.innerHTML = '';
+
+        let iconNode;
+        if (mode === 'light') {
+            iconNode = Sun;
+        } else if (mode === 'dark') {
+            iconNode = Moon;
+        } else {
+            iconNode = SunMoon;
+        }
+
+        const iconSVG = createElement(iconNode, {class: ['w-4 h-4']});
+        iconEl.appendChild(iconSVG);
+    }
+
     // Apply theme to document
     function applyTheme(mode) {
         if (mode === 'dark') {
@@ -42,6 +63,7 @@
             }
         }
         themeLabel.textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+        updateThemeIcon(mode);
     }
 
     // Set theme and save to localStorage
