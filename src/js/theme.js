@@ -15,7 +15,7 @@ function updateThemeIcon(iconHolder, mode) {
     let node = SunMoon;
     if (mode === 'light') node = Sun;
     else if (mode === 'dark') node = Moon;
-    const iconSVG = createElement(node, { class: ['w-4', 'h-4'] });
+    const iconSVG = createElement(node, { class: ['w-4 h-4'] });
     iconHolder.appendChild(iconSVG);
 }
 
