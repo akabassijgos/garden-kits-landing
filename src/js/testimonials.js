@@ -29,9 +29,9 @@ export function initTestimonials() {
     testimonials.forEach((t, i) => {
         // create slide
         const slide = document.createElement('article');
-        slide.className = 'flex-shrink-0 w-full px-16 py-6 bg-surface rounded-2xl border border-border/10 shadow-md flex gap-4 items-center';
+        slide.className = 'flex-shrink-0 w-full px-16 py-6 bg-surface rounded-2xl border border-border/10 shadow-md flex flex-col md:flex-row gap-4 md:gap-6 items-center';
         slide.innerHTML = `
-      <img src="${t.img}" alt="${t.name}" class="w-40 h-40 rounded-full object-cover shadow-sm shrink-0">
+      <img src="${t.img}" alt="${t.name}" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-sm shrink-0">
       <div>
         <blockquote class="text-text-primary text-lg">“${t.text}”</blockquote>
         <div class="mt-3 text-sm text-text-secondary">${t.name}, ${t.location}</div>
